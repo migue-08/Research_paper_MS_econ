@@ -1,0 +1,111 @@
+---
+title: "ICFES Saber 11"
+subtitle: "Munging data"
+author: "Miguel Martinez"
+date: today
+format: 
+  html:
+    toc: true
+    theme: cosmo
+editor: visual
+execute:
+  warning: false
+---
+
+This document presents the process about importing, tranforming and filtering the SABER 11 test from 2010-2022 in Colombia. You can download the data [here](https://www.datos.gov.co/Educaci-n/Resultados-nicos-Saber-11/kgxf-xxbe/about_data).
+
+The first step is to load the following library:
+
+```{r}
+
+library(tidyverse)
+```
+
+## Load data
+
+Now we can load the data:
+
+```{r}
+
+data = read.csv("https://www.datos.gov.co/resource/kgxf-xxbe.csv")
+
+glimpse(data)
+```
+
+## Transformation
+
+In the following code, we transform the `PERIODO` variable into:
+
+1.  *Year*
+
+2.  *Period*
+
+For example: the value 20131 in the `PERIODO` variable, means that the exam was made in the first period of the year 2013.
+
+```{r}
+
+data = data |>
+  separate_wider_position(periodo,
+                          widths = c(ANO = 4,
+                                     PER = 1))
+
+glimpse(data)
+```
+
+## Examen Saber 11 - 2019
+
+This is the Saber 11 test filtered for the year 2019.
+
+```{r}
+
+data2019 = data |>
+  filter(ANO == "2019")
+
+glimpse(data2019)
+
+```
+
+## Examen Saber 11 - 2022
+
+This is the Saber 11 test filtered for the year 2022.
+
+```{r}
+
+data2022 = data |>
+  filter(ANO == "2022")
+
+glimpse(data2022)
+
+```
+
+## Examen Saber 11 - 2019 y 2022
+
+This is the Saber 11 test filtered for the year 2019 and 2022.
+
+```{r}
+
+data1922 = data |>
+  filter(ANO %in% c("2019", "2022"))
+
+glimpse(data1922)
+
+```
+
+## Exporting the data
+
+To export the data frames, you just need to uncomment and run the following code chunks:
+
+```{r}
+
+# write.csv(data2019, file = 'saber11_2019.csv', row.names = FALSE, quote = FALSE, sep = ",")
+```
+
+```{r}
+
+# write.csv(data2022, file = 'saber11_2022.csv', row.names = FALSE, quote = FALSE, sep = ",")
+```
+
+```{r}
+
+# write.csv(data1922, file = 'saber11_2019_2022.csv', row.names = FALSE, quote = FALSE, sep = ",")
+```
