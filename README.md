@@ -10,7 +10,7 @@ In order to reproduce the empirical exercise of this paper, you can clone [this 
 
 4. Now you can merge the previous datasets into one aggregated dataframe, where you can also transform the required variables, standardize the individual test scores of the exams and create the summary statistics tables. You can do this following this [Notebook][9].
 
-5. Finally, you can reproduce the regression analysis in STATA according to this [do file][10].
+5. Finally, you can reproduce the regression analysis in STATA according to this [do file][10] or compute the coefficients with this [Notebook][16].
 
 ## Visualizations
 
@@ -45,3 +45,4 @@ With data from DANE scholar census, we computed the percentage change of total n
 [13]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Matricula_ed_bas_sec_media.ipynb
 [14]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Tasa_deserci%C3%B3n.ipynb
 [15]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Tasa_tecnolog%C3%ADa_por_estudiante.ipynb
+[16]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/regression_coefs.ipynb
