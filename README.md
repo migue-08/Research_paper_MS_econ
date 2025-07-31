@@ -6,9 +6,9 @@ In order to reproduce the empirical work of this research paper, you can clone t
 $ git clone https://github.com/migue-08/Research_paper_MS_econ.git
 ```
 
-First you need to download the Saber11 dataset from ICFES [here][1], and the scholar census information from DANE in the following links [2019][2] and [2022][3]. You can find the required libraries to reproduce the notebooks [here][4]. Once you download the required information you can follow this steps:
+First you need to download the Saber11 dataset from ICFES [here][1], and the scholar census information from DANE in the following links [2019][2] and [2022][3]. Next, you need to create a virtual environment with the following [libraries][4] and latest python version to reproduce the notebooks. Once you download the required information you can follow this steps:
 
-1. To filter the Saber11 dataset only with the information for the years 2019 and 2022, you can follow the procedure of this [R document][5]. Then you can export the data.
+1. To filter the Saber11 dataset only with the information for the years 2019 and 2022, you can follow this [R document][5]. Then you can export the resulting dataframe.
 
 2. Once you have filtered the Saber11 information, you can apply the first screenings to the dataset according to this [notebook][6].
 
