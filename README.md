@@ -14,23 +14,29 @@ First you need to download the Saber11 datasets from DataIcfes [here][1], and th
 
 3. Next, you can merge the previous two dataframes into one aggregated, where you can also transform the required variables in the model, standardize the individual test scores of the exams and create the summary statistics tables ([and t tests][7]). You can do this following this [notebook][8].
 
-4. Finally, you can reproduce the regression analysis in STATA according to this [do file][9]. For the treatment decomposition regression, you can follow this [do file][10].
+4. Finally, you can reproduce the regression analysis in STATA according to this [do file][9]. 
+
+5. Robustness checks are also available here:
+    - Inverse probability weighting (IPW) [here][10]
+    - For treatment decomposition analysis, you can follow this [do file][11].
+    - Placebos are available [here][12]
+    - Fixed effects by educational institution in this [do file][13]
 
 ## Visualizations
 
 You can also reproduce some of the graphs of the research paper:
 
-* [Total students enrolled in preschool and primary education][11]
+* [Total students enrolled in preschool and primary education][14]
 
-* [Total students enrolled in secondary education][12]
+* [Total students enrolled in secondary education][15]
 
-* [Desertion rate][13]
+* [Desertion rate][16]
 
 ## Additional exercise
 
 With data from DANE scholar census, we computed the percentage change of total number of electronic devices as well as the rate of electronic devices per student enrolled:
 
-* [Additional exercise][14]
+* [Additional exercise][17]
 
 [1]: https://www.icfes.gov.co/investigaciones/data-icfes/
 [2]: https://microdatos.dane.gov.co/index.php/catalog/669/get-microdata
@@ -41,8 +47,11 @@ With data from DANE scholar census, we computed the percentage change of total n
 [7]: https://raw.githubusercontent.com/migue-08/Research_paper_MS_econ/refs/heads/main/ttest.do
 [8]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/merged.ipynb
 [9]: https://github.com/migue-08/Research_paper_MS_econ/raw/refs/heads/main/regression_analysis.do
-[10]: https://raw.githubusercontent.com/migue-08/Research_paper_MS_econ/refs/heads/main/decomposition.do
-[11]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Matricula_ed_inic_bas_primaria.ipynb
-[12]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Matricula_ed_bas_sec_media.ipynb
-[13]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Tasa_deserci%C3%B3n.ipynb
-[14]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Tasa_tecnolog%C3%ADa_por_estudiante.ipynb
+[10]: https://raw.githubusercontent.com/migue-08/Research_paper_MS_econ/refs/heads/main/ipw_year.do
+[11]: https://raw.githubusercontent.com/migue-08/Research_paper_MS_econ/refs/heads/main/decomposition.do
+[12]: https://raw.githubusercontent.com/migue-08/Research_paper_MS_econ/refs/heads/main/placebos.do
+[13]: https://raw.githubusercontent.com/migue-08/Research_paper_MS_econ/refs/heads/main/fixed_effects_sede.do
+[14]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Matricula_ed_inic_bas_primaria.ipynb
+[15]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Matricula_ed_bas_sec_media.ipynb
+[16]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Tasa_deserci%C3%B3n.ipynb
+[17]: https://nbviewer.org/github/migue-08/Research_paper_MS_econ/blob/main/Tasa_tecnolog%C3%ADa_por_estudiante.ipynb
