@@ -20,7 +20,6 @@ import delimited final_principal.csv
 local X edad estu_genero_f estu_inse_individual i.fami_educacionmadre i.fami_educacionpadre cole_bilingue cole_area_ubicacion_urbano cole_naturaleza_nooficial
 
 // Model 1
-* Estimar DiD con pesos IPW y clustering nivel sede
 
 eststo: quietly reghdfe punt_global ano_2022 entorno_tecnologico _x_entorno_tecnologico `X', absorb(cole_cod_dane_sede) vce(cluster cole_cod_dane_sede)
 
@@ -34,7 +33,6 @@ eststo clear
 
 
 // Model 2
-* Estimar DiD con pesos IPW y clustering nivel sede
 
 eststo: quietly reghdfe punt_lectura_critica ano_2022 entorno_tecnologico _x_entorno_tecnologico `X', absorb(cole_cod_dane_sede) vce(cluster cole_cod_dane_sede)
 
@@ -48,7 +46,6 @@ eststo clear
 
 
 // Model 3
-* Estimar DiD con pesos IPW y clustering nivel sede
 
 eststo: quietly reghdfe punt_matematicas ano_2022 entorno_tecnologico _x_entorno_tecnologico `X', absorb(cole_cod_dane_sede) vce(cluster cole_cod_dane_sede)
 
@@ -62,7 +59,6 @@ eststo clear
 
 
 // Model 4
-* Estimar DiD con pesos IPW y clustering nivel sede
 
 eststo: quietly reghdfe punt_ingles ano_2022 entorno_tecnologico _x_entorno_tecnologico `X', absorb(cole_cod_dane_sede) vce(cluster cole_cod_dane_sede)
 
@@ -76,7 +72,6 @@ eststo clear
 
 
 // Model 5
-* Estimar DiD con pesos IPW y clustering nivel sede
 
 eststo: quietly reghdfe punt_c_naturales ano_2022 entorno_tecnologico _x_entorno_tecnologico `X', absorb(cole_cod_dane_sede) vce(cluster cole_cod_dane_sede)
 
@@ -90,7 +85,6 @@ eststo clear
 
 
 // Model 6
-* Estimar DiD con pesos IPW y clustering nivel sede
 
 eststo: quietly reghdfe punt_sociales_ciudadanas ano_2022 entorno_tecnologico _x_entorno_tecnologico `X', absorb(cole_cod_dane_sede) vce(cluster cole_cod_dane_sede)
 
